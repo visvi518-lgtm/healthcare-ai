@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {
-  Menu, X, Heart, User, LogOut, Settings, Shield,
+  Menu, X, User, LogOut, Settings, Shield,
   Activity, MessageCircle, Newspaper, Dumbbell, MessageSquare, ChevronRight,
 } from 'lucide-react';
 import { useAuthStore } from '@/store/authStore';
@@ -45,9 +45,8 @@ export default function Header() {
               >
                 <Menu className="w-5 h-5" />
               </button>
-              <Link to="/" className="flex items-center gap-2 text-primary-600 font-bold text-xl">
-                <Heart className="w-6 h-6 fill-current" />
-                닥터노트AI
+              <Link to="/">
+                <img src="/logo.png" alt="닥터노트AI" className="h-9 w-auto" />
               </Link>
             </div>
 
@@ -125,13 +124,8 @@ export default function Header() {
       >
         {/* Sidebar header */}
         <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-primary-600 font-bold text-lg"
-            onClick={() => setSidebarOpen(false)}
-          >
-            <Heart className="w-5 h-5 fill-current" />
-            닥터노트AI
+          <Link to="/" onClick={() => setSidebarOpen(false)}>
+            <img src="/logo.png" alt="닥터노트AI" className="h-8 w-auto" />
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}
