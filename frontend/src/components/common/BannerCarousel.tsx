@@ -27,7 +27,7 @@ export default function BannerCarousel() {
     if (total <= 1) return;
     timerRef.current = setInterval(
       () => setCurrent((c) => (c + 1) % total),
-      3000
+      5000
     );
     return () => clearInterval(timerRef.current);
   }, [total]);
